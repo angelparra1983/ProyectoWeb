@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var repetir="si";
+
+        do{
+
+        
+            var operacion = prompt("Introduce la operacion que quieres realizar: suma/resta/multiplicacion/division ");
+
+            var num_1 = parseInt(prompt("Introduce el primer numero: "));
+            var num_2 = parseInt(prompt("Introduce el segundo numero: "));
+
+
+            if (operacion == "suma"){
+
+                function suma(num1, num2){
+                    var operacion = num1 + num2;
+
+                    alert("La suma es: " + operacion);
+
+                }
+
+                suma(num_1, num_2);
+                
+
+            }
+
+            else if (operacion == "resta"){
+
+                function resta(num1, num2){
+                    var operacion = num1 - num2;
+
+                    alert("La resta es: " + operacion);
+                }
+
+                resta(num_1, num_2);
+
+
+            }
+
+            else if (operacion == "multiplicacion"){
+
+                function multiplicacion(num1, num2){
+                    var operacion = num1 * num2;
+
+                    alert("La multiplicacion es: " + operacion);
+                }
+
+                multiplicacion(num_1, num_2);
+
+
+            }
+            
+            else if (operacion == "division"){
+
+                function division(num1, num2){
+                    var operacion = num1 / num2;
+
+                    alert("La division es: " + operacion);
+                }
+
+                division(num_1, num_2);
+    
+
+            }
+            else{
+
+                alert("Operacion no valida");
+            }
+
+            repetir = prompt("Deseas reptir otra operacion");
+            
+        }while (repetir=="si");
+        
+        
+
+    </script>
+</head>
+
+<body>
+    
+</body>
+</html>

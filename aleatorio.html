@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+var aleatorio=Math.round(Math.random()*100);
+
+var minum, intentos;
+    
+minum=0;
+intentos=0;
+
+do{
+    minum = prompt("Ingresa un numero: ");
+    if (aleatorio>minum){
+        
+        document.write("el numero aleatorio es mayor" + "<br/>");
+        alert("el numero aleatorio es mayor");
+    }
+    else if(aleatorio<minum){
+        
+        document.write("el numero aleatorio es menor" + "<br/>");
+        alert("el numero aleatorio es menor");
+    }
+    else{
+        
+        document.write("los numeros son iguales" + "<br/>");
+        alert("los numeros son iguales");
+    }
+    intentos++;
+
+
+}while(aleatorio!=minum);
+
+document.write("correcto. Has comsumido " + intentos + " intentos");
+    
+</script>
+
+</head>
+
+
+<body>
+    
+</body>
+</html>

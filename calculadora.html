@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+var num1 = prompt("Introduce el primer numero: ");
+
+var num2 = prompt("Introduce el segundo numero: ");
+
+
+if (!isNaN(num1) && !isNaN(num2)){
+       
+    do{
+        var operacion = prompt("Introduce la operacion que quieres realizar: suma/resta/multiplicacion/division ");
+        
+    }while(operacion != "suma" && operacion != "resta" && operacion!= "multiplicacion" && operacion!= "division" );
+    
+
+
+        if (operacion == "suma"){
+            var suma = parseInt(num1)  + parseInt(num2);
+            alert("La suma de los numero es: " + suma);
+
+        }
+        else if (operacion == "resta"){
+            var resta = parseInt(num1) - parseInt(num2);
+            alert("La resta de los numero es: " + resta);
+
+        }
+        else if (operacion == "multiplicacion"){
+            var multiplicacion = parseInt(num1) * parseInt(num2);
+            alert("La multiplicacion de los numero es: " + multiplicacion);
+
+        }
+        else {
+            var division = parseInt(num1) / parseInt(num2);
+            alert("La division de los numero es: " + division);
+
+        }
+
+    }
+
+else{
+    alert("No se puede hacer la operacion")
+
+}
+
+</script>
+
+</head>
+
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+h1{
+	text-align:center;
+} 
+
+img{
+    margin: 15px;
+    width: 250px;
+    height: 200px;
+}
+
+</style>
+<script src="Jquery/jquery-1.6.3.min.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+
+    /* document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+    document.getElementById("img1").addEventListener("mouseout", restaurar, false); */
+
+    var elementos=document.querySelectorAll("img");
+
+    for (var i=0;i<elementos.length;i++){
+
+      elementos[i].addEventListener("mouseover",cambiar, false);
+      elementos[i].addEventListener("mouseout",restaurar, false);
+    }
+
+  });
+
+  function cambiar(e){
+
+  if(e.target==img1){
+
+    $("#img1").attr("src","imgs/mibebe.jpg");
+
+  }else if (e.target==img2){
+
+    $("#img2").attr("src","imgs/arbol.jpg");
+
+  }else if (e.target==img3){
+
+    $("#img3").attr("src","imgs/avion.jpg");
+
+  }else if (e.target==img4){
+
+    $("#img4").attr("src","imgs/guante.jpg");
+
+  }
+
+}
+  function restaurar(e){
+
+    if(e.target==img1){
+
+      $("#img1").attr("src","imgs/arbol.jpg");
+
+    }else if (e.target==img2){
+
+      $("#img2").attr("src","imgs/avion.jpg");
+
+    }else if (e.target==img3){
+
+      $("#img3").attr("src","imgs/guante.jpg");
+
+    }else if (e.target==img4){
+
+      $("#img4").attr("src","imgs/mibebe.jpg");
+
+  }
+
+}
+
+</script>
+</head>
+
+<body>
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="imgs/arbol.jpg" id="img1" ></td>
+    <td><img src="imgs/avion.jpg" id="img2" ></td>
+    <td><img src="imgs/guante.jpg" id="img3" ></td>
+    <td><img src="imgs/mibebe.jpg" id="img4" ></td>
+  </tr>
+</table>
+</body>
+</html>
